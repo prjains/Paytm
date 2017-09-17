@@ -4,11 +4,10 @@ SessionizeElb
 =======================================
 
 # Notes  :
-1. Taken a window of 15 mins for aggregation.
-2. Unique User = ClientIP + User Agent (Excluded port number from the Client IP - as same Ip can have multiple ports)
-3. Session Time = (Max Timestamp - Min Timestamp) --- in the window of 15 mins for each user.
-4. Excluded microSeconds from the Timestamp
-5. The "interval" field in the output contains the Start Time for the 15 mins interval for all records in that interval.
+1. Unique User = ClientIP + User Agent (Excluded port number from the Client IP - as same Ip can have multiple ports)
+2. Session Time = (Max Timestamp - Min Timestamp) --- in the window of 15 mins for each user.
+3. Excluded microSeconds from the Timestamp
+4. The "interval" field in the output contains the Start Time for the 15 mins interval for all records in that interval.
 
 =======================================
 
