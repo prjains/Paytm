@@ -34,7 +34,7 @@ val perWindowUser = data.groupBy(interval,$"Client",$"user_agent").agg(max(ts).c
 
 val perUser = perWindowUser.groupBy($"Client",$"user_agent").agg(avg($"Duration(Sec)").as("AvgDuration"),sum($"Duration(Sec)").as("TotalDuration")).sort(desc("TotalDuration")); // this gives the Avg Duration and Total Duration of each user. The result is sorted in descending order of Total Duration to get the most engaged users.
 
-perWindow.write.parquet(args(2)); // Output 1:  Session Duration in a Window per user
+perWindow.write.parquet(args(2)); // Output 1:  Session Duration and Distinct Req Count in a Window per user
 perUser.write.parquet(args(3)); // Output 2 : Avg Session Time, Total of all Sessions, per user ,among all windows.
 sc.stop();
   }

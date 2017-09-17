@@ -15,7 +15,8 @@ SessionizeElb
 
 1. Handling Double Quoted Fields in the Text data.
 
-2. Some records did not have even number of Double quotes - Hence Ignored 
+2. Some records did not have even number of Double quotes - Hence Ignored.
+ 
    Example : 2015-07-22T16:10:50.873283Z marketpalce-shop 106.51.132.54:4210 10.0.6.99:81 0.000024 0.000215 0.00002 301 301 0 178 "GET http://paytm.com:80/%27"()&%251%3CScRiPt%20%3Eprompt(981045)%3C/ScRiPt%3E/about HTTP/1.1" "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)" - -
 
 =====================================
@@ -24,5 +25,5 @@ SessionizeElb
 The code expects 4 inputs - 
 1. Input file path on HDFS
 2. Window Duration in Seconds
-3. Output Path for Per Window, Per User aggregation - Gives Session Duration
+3. Output Path for Per Window, Per User aggregation - Gives Session Duration and Distinct Req Count
 4. Output Path for Per User aggregation - Avg Session, Total Session time- Sorted in Desc Order.
